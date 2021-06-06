@@ -1,5 +1,5 @@
-# How to install ElectrumX for Sumcoin using the ElectrumX installer script
-This guide assumes you have Sumcoind running and synced with the Sumcoin blockchain with RPC credentials set and transaction indexing enabled.
+# How to install ElectrumX for Fastcoin using the ElectrumX installer script
+This guide assumes you have Fastcoind running and synced with the Fastcoin blockchain with RPC credentials set and transaction indexing enabled.
 
 ## Step 1 - Download the script
 Clone the script:   
@@ -15,10 +15,10 @@ cd electrumx-installer
 ```
 
 ## Step 2 - Run the script
-Now run the script to install ElectrumX with Sumcoin:   
+Now run the script to install ElectrumX with Fastcoin:   
 
 ```
-sudo bash ./install.sh --electrumx-git-url https://github.com/sumcoinlabs/electrumx-sum.git
+sudo bash ./install.sh --electrumx-git-url https://github.com/fastcoin-project/electrumx-fst.git
 ```
 
 * Let the script install all required dependencies and install ElectrumX (this takes about 2-5 minutes).
@@ -95,7 +95,7 @@ If your certificate is lost or expires on the server side, you will need to run 
 
 
 
-## Step 3 - Configure ElectrumX for Sumcoin
+## Step 3 - Configure ElectrumX for Fastcoin
 
 Electrum reads a config file (/etc/electrum.conf) when starting up. This file includes the database setup, sumcoind RPC setup, and a few other options.
 
@@ -112,13 +112,13 @@ sudo nano /etc/electrumx.conf
 
 ```
 # default /etc/electrumx.conf for systemd
-COIN = Sumcoin
+COIN = Fastcoin
 NET = mainnet
 
 # REQUIRED
 DB_DIRECTORY = /db
-# Sumcoin Node RPC Credentials
-DAEMON_URL = http://<RPCUSER>:<RPCPASSWORD>@localhost:3332/
+# Fastcoin Node RPC Credentials
+DAEMON_URL = http://<RPCUSER>:<RPCPASSWORD>@localhost:9527/
 
 
 # See http://electrumx.readthedocs.io/en/latest/environment.html for
@@ -130,6 +130,7 @@ SSL_CERTFILE=/etc/electrumx/server.crt
 SSL_KEYFILE=/etc/electrumx/server.key
 TCP_PORT=53332
 SSL_PORT=53333
+# CHECK ABOVE PORT IN LIB/COINS.PY
 # Listen on all interfaces:
 HOST=127.0.0.1
 ```
