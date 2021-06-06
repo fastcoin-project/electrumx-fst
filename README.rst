@@ -4,7 +4,7 @@
     :target: https://coveralls.io/github/kyuupichan/electrumx
 
 ===========================================================
-ElectrumX - Reimplementation of electrum-server for Sumcoin
+ElectrumX - Reimplementation of electrum-server for Fastcoin
 ===========================================================
 
 For a future network with bigger blocks.
