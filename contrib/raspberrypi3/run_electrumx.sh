@@ -4,10 +4,10 @@
 ###############
 
 # configure electrumx
-export COIN=Sumcoin
+export COIN=Fastcoin
 export DAEMON_URL=http://rpcuser:rpcpassword@127.0.0.1
 export NET=mainnet
-export CACHE_MB=400
+export CACHE_MB=600
 export DB_DIRECTORY=/home/username/.electrumx/db
 export SSL_CERTFILE=/home/username/.electrumx/certfile.crt
 export SSL_KEYFILE=/home/username/.electrumx/keyfile.key
@@ -16,8 +16,8 @@ export DONATION_ADDRESS=your-donation-address
 
 # connectivity
 export HOST=
-export TCP_PORT=53332
-export SSL_PORT=53333
+export TCP_PORT=59527
+export SSL_PORT=59526
 
 # visibility
 export REPORT_HOST=hostname.com
