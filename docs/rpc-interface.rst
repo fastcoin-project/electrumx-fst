@@ -69,10 +69,10 @@ A typical result is as follows (with annotated comments)::
 
   $ electrumx_rpc getinfo
   {
-      "coin": "Sumcoin",
-      "daemon": "127.0.0.1:3332/",
-      "daemon height": 572154,         # The daemon's height when last queried
-      "db height": 572154,             # The height to which the DB is flushed
+      "coin": "Fastcoin",
+      "daemon": "127.0.0.1:9527/",
+      "daemon height": 11472154,         # The daemon's height when last queried
+      "db height": 11472154,             # The height to which the DB is flushed
       "groups": 586,                   # The number of session groups
       "history cache": "185,014 lookups 9,756 hits 1,000 entries",
       "merkle cache": "280 lookups 54 hits 213 entries",
