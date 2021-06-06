@@ -27,15 +27,15 @@ DB Engine        A database engine package is required; two are
 Some coins need an additional package, typically for their block hash
 functions.  For example, `x11_hash`_ is required for DASH.
 
-You **must** to be running a non-pruning sumcoin daemon with::
+You **must** to be running a non-pruning fastcoin daemon with::
 
   txindex=1
 
 set in its configuration file.  If you have an existing installation
-of sumcoind and have not previously set this you will need to reindex
+of fastcoind and have not previously set this you will need to reindex
 the blockchain with::
 
-  sumcoind -reindex
+  fastcoind -reindex
 
 which can take some time.
 
@@ -51,7 +51,7 @@ used to either.
 When building the database from the genesis block, ElectrumX has to
 flush large quantities of data to disk and its DB.  You will have a
 better experience if the database directory is on an SSD than on an
-HDD.  Currently to around height 447,100 of the Sumcoin blockchain the
+HDD.  Currently to around height 11,500,000 of the Fastcoin blockchain the
 final size of the leveldb database, and other ElectrumX file metadata
 comes to just over 18.7GB (17.5 GiB).  LevelDB needs a bit more for
 brief periods, and the block chain is only getting longer, so I would
@@ -78,8 +78,8 @@ Install the prerequisites above.
 
 Check out the code from Github::
 
-    git clone https://github.com/kyuupichan/electrumx.git
-    cd electrumx
+    git clone https://github.com/fastcoin-project/electrumx-fst.git
+    cd electrumx-fst
 
 You can install with :file:`setup.py` or run the code from the source
 tree or a copy of it.
